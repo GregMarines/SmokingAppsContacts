@@ -1,14 +1,18 @@
-<section class="artistinfo">
-  <div class="artists cf" ng-model="artists">
+<section class="contactinfo">
+  <div class="contact cf" ng-model="contacts">
     <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
 	<a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
-    <h1>{{artists[whichItem].FIRSTNAME + ' ' + artists[whichItem].LASTNAME}}</h1>
+	<a href="index.html" class="btn btn-back">&laquo; Back to Search</a>
+    <h1>{{contacts[whichItem].FIRSTNAME + ' ' + contacts[whichItem].LASTNAME}}</h1>
 	<div class="info">
-	  <h3>{{artists[whichItem].EMPLOYEE_TITLE}}</h3>
-	  <img ng-src="images/{{artists[whichItem].EMPLOYEE_PICTURE}}" alt="Photo of {{artists[whichItem].FIRSTNAME}}">
-	  <div class="bio">{{artists[whichItem].EMPLOYEE_BLURB}}</div>
+	  <h3>{{contacts[whichItem].EMPLOYEE_TITLE}}</h3>
+      <div class="contactnumber">
+      <h4>Cell {{contacts[whichItem].CELL_PHONE}}</h4>
+	  <h4>Office {{contacts[whichItem].OFFICE_PHONE}}</h4>	
+      </div>
+	  <img ng-src="images/{{contacts[whichItem].EMPLOYEE_PICTURE}}" alt="Photo of {{contacts[whichItem].FIRSTNAME}}">
+      
+	  <div class="bio">{{contacts[whichItem].EMPLOYEE_BLURB}}</div>
 	</div>
-	<h1>Cell Phone: {{artists[whichItem].CELL_PHONE}}</h1>
-	<h1>Office Phone: {{artists[whichItem].OFFICE_PHONE}}</h1>	
-  <a href="index.html">&laquo; Back to Search</a>
+	
 </section>

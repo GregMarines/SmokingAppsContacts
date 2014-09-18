@@ -18,3 +18,20 @@ myApp.config (['$routeProvider', function($routeProvider) {
   });  
 	
 }]);
+
+
+function handleDeviceBackButton(){
+    alert('ill never see this');
+	navigator.notification.confirm(
+		'Do you want to quit', 
+        onConfirmQuit, 
+        'QUIT TITLE', 
+        'OK,Cancel'  
+    );
+}
+
+function onConfirmQuit(button){
+    if(button == "1"){
+        setTimeout( function() { navigator.app.exitApp(); }); 
+    }
+}

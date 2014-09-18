@@ -20,6 +20,7 @@ time, mark, audio, video {
 margin: 0;
 padding: 0;
 border: 0;
+letter-spacing:-.5px;
 font: inherit;
 font-size: 100%;
 vertical-align: baseline; } 
@@ -75,18 +76,17 @@ box-sizing: border-box; }
 }
 
 html {
-background-color: #023E54;
-background-image: url(images/fallback-gradient.png);
-background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
-background-image: -webkit-linear-gradient(top, #023E54, #10AAC0);
-background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
-background-image: -o-linear-gradient(top, #023E54, #10AAC0);
+background-color: #6d0403;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#960503), to(#6d0403));
+background-image: -webkit-linear-gradient(top, #960503, #6d0403);
+background-image: -moz-linear-gradient(top, #960503, #6d0403);
+background-image: -o-linear-gradient(top, #960503, #6d0403);
 min-height: 100%;
 height: auto;
 } 
 
  body {
-font-family: Merriweather, serif;
+font-family: Arial, Helvetica, sans-serif;
 font-size: 1rem;
 line-height: 160%;
 padding-top: 10px;
@@ -106,7 +106,7 @@ font-family: Bree Serif, serif;
 }
 
 h1 {
-color: #145266;
+color: #fff;
 font-size: 2.2em;
 line-height: 100%;
 margin-bottom: 10px;
@@ -116,15 +116,22 @@ margin-bottom: 10px;
 h2 {
 font-size: 1.5rem;
 line-height: 90%;
-color: #c61c6f;
+color: #000000;
+margin-bottom:.3em;
 } 
 
 h3 {
 margin-top: 0;
-color: #bd3613;
+color: #666;
 line-height: 90%;
 margin-bottom: 5px;
+font-family:"Times New Roman", Times, serif;
+font-style:italic;
 } 
+
+h4 {padding:3px 10px; background:#eee; font-size:14px; margin:0px; border:1px solid #ccc; border-radius:5px; color:#000; float:left; width:45%; margin-right:10px;}
+
+.contactnumber {clear:both; width:100%; margin-bottom:10px; display:block; float:left;}
 
 p{
 line-height: 1.3em;
@@ -140,20 +147,19 @@ font-size: .9em;
 
 /* Search Styles */
 .search{
-background: #063642;
-color: #EEE8D5;
+background: #6d0403;
+color: #fff;
 width: 90%;
 min-width: 320px;
 max-width: 500px;
 margin: 0 auto;
 margin-top: 30px;
-border-radius: 20px;
 padding: 20px 30px;
 z-index: 20;
 }
 
 .search h1{
-color: #EEE8D5;
+color: #fff;
 }
 
 .btn {
@@ -169,8 +175,8 @@ color: #EEE8D5;
 	  cursor: pointer;
 	  border: 1px solid transparent;
 	  border-radius: 4px;
-	  background: #C61C6F;
-	  color: #FCF4DC;
+	  background: #888;
+	  color: #fff;
 	  -webkit-user-select: none;
 	     -moz-user-select: none;
 	      -ms-user-select: none;
@@ -183,11 +189,16 @@ float: left;
 }
 
 .btn .btn-right{
+float: left;
+}
+
+.btn-back{
 float: right;
+margin-right:5px;
 }
 
 .btn:hover{
-background: #095760;
+background: #960503;
 }
 
 .search label {
@@ -199,9 +210,9 @@ font-family: 'Droid Sans', sans-serif;
 width: 100%;
 padding: 10px 0 10px 15px;
 font-size: 1rem;
-color: #475B62;
-background: rgba(255,255,255,0.4);
-border: 1px solid rgba(255,255,255,0.2);
+color: #fbb1b0;
+background: #960503;
+border: 1px solid #830503;
 border-radius: 10px;
 outline: 0;
 }
@@ -213,45 +224,45 @@ width: auto;
 }
 
 .search  label.formgroup{
-display: inline;
+display:block;
 width: auto;
 }
 
 .search select{
-dispaly: inline;
+display: inline;
 padding: 10px 0 10px 15px;
 font-size: 1rem;
-color: #475B62;
-background: rgba(255,255,255,0.4);
-border: 1px solid rgba(0,0,0,0.3);
+color: #fff;
+background: #4d0302;
+border: 1px solid #3d0201;
 border-radius: 10px;
 outline: 0;
 }
 
 /* Contacts List Styles */
 
-.artistlist{
-background: #EEE8D5;
+.contactlist{
+background: #ccc;
 width: 50%;
 min-width: 290px;
 max-width: 350px;
 margin: 0 auto;
 margin-bottom: 30px;
 border-radius: 0 0 20px 20px;
-opacity: .95;
+opacity: 1;
 z-index: 10;
 }
 
-.artistlist ul{
+.contacttlist ul{
 margin: 0;
 padding: 0;
 background: #FDF6E3;
 }
 
-.artistlist li{
+.contactlist li{
 margin: 0;
-padding: 10px 10px 0 10px;
-border-bottom: 1px dotted black;
+padding: 10px 10px 10px 10px;
+border-bottom: 1px solid #666;
 opacity: .9;
 -webkit-transition: all 0.3s ease-out;
 -moz-transition: all 0.3s ease-out;
@@ -259,13 +270,13 @@ opacity: .9;
 transition: all 0.3s ease-out;
 }
 
-.artistlist a{
+.contactlist a{
 display: block;
 text-decoration: none;
 }
 
-.artistlist li:hover{
-background: #FDF6E3;
+.contactlist li:hover{
+background: #eee;
 opacity: 1;
 -webkit-tranform: scale(1.2);
 -moz-transform: scale(1.2);
@@ -273,7 +284,7 @@ opacity: 1;
 transform: scale(1.2);
 }
 
-.artist img{
+.contact img{
 display: block;
 float: left;
 width: 60px;
@@ -283,20 +294,20 @@ margin-right: 10px;
 margin-bottom: 10px;
 }
 
-.artist info{
+.contact info{
 display: block;
 float: left;
 padding-left: 120px !important;
 }
 
-.artist:last-child{
+.contact:last-child{
 border-bottom:none;
 }
 
-.artistinfo {
+.contactinfo {
 font-size: 1.1em;
 line-height: 160%;
-background: #EEE8D5;
+background: #fff;
 color: #0F4150;
 width: 90%;
 min-width: 320px;
@@ -305,35 +316,39 @@ margin: 0 auto;
 margin-top: 30px;
 margin-bottom: 30px;
 padding: 20px 30px;
-border-radius: 10px;
 z-index: 20;
 }
 
-.artistinfo h1{
+.contactinfo h1{
 font-size: 1.8em;
 margin-bottom: 0;
+color:#960503;
+margin-bottom:.3em;
+margin-top:.3em;
+}
+.contactinfo h2{
+margin-bottom:.3em;
 }
 
-.artistinfo img{
-height:100%;
-width: 100%;
+.contactinfo img{
+width: 45%;
 max-width: 130px;
 max-height: 180px;
-border-radius: 20px;
+border-radius: 5px;
 float:left;
 margin-right:25px;
 margin-bottom:5px;
 }
 
-.artist.ng-enter.ng-enter-active,
-.artist.ng-leave {
+.contact.ng-enter.ng-enter-active,
+.contact.ng-leave {
 opacity: 1;
 height: 80px;
 overflow:hidden;
 }
 
-.artist.ng-leave.ng-leave-active,
-.artist.ng-enter {
+.contact.ng-leave.ng-leave-active,
+.contact.ng-enter {
 opacity: 0;
 height: 0;
 overflow:hidden;
