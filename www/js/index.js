@@ -78,7 +78,7 @@ function registerPushwooshAndroid() {
 		//alert("title" + title);
 		//alert("userData" + userData);
 		alert("msg" + msg);
-		window.location.href = "https://build.phonegap.com/apps/1061105/share";
+		window.location.href = "https://build.phonegap.com/apps/1094452/share";
 		//dump custom data to the console if it exists
 		if(typeof(userData) != "undefined") {
 			console.warn('user data: ' + JSON.stringify(userData));
