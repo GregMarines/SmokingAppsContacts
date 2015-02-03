@@ -197,6 +197,7 @@ function initPushwoosh() {
 	
 	if(device.platform == "iPhone" || device.platform == "iOS")
 		{
+		        alert('yes');
 			registerPushwooshIOS();
 			pushNotification.onDeviceReady();
 		}
